@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://owydjqr501u3"]
+
+[ext_resource type="Script" uid="uid://dk0bdgg7d0dbd" path="res://scripts/submarinedata.gd" id="1_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=1595279973]
+
+[node name="SubmarineData" type="Node" parent="." unique_id=383055807]
+script = ExtResource("1_uwrxv")
+metadata/_custom_type_script = "uid://dk0bdgg7d0dbd"
