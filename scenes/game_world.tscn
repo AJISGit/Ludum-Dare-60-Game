@@ -16,7 +16,6 @@ polygon = PackedVector2Array(-1127, -950, 2190, -984, 2217, 1552, -932, 1526)
 
 [node name="PhysicalSub" parent="." unique_id=25893487 instance=ExtResource("2_0vfqx")]
 unique_name_in_owner = true
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(478, 334)
 scale = Vector2(0.05, 0.05)
 max_velocity = 400.0
@@ -24,7 +23,6 @@ max_velocity = 400.0
 [node name="Camera2D" type="Camera2D" parent="PhysicalSub" unique_id=1970256948]
 
 [node name="Enemy" parent="." unique_id=386252729 instance=ExtResource("3_ywgp6")]
-visible = false
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(262, 300.99994)
 scale = Vector2(0.1, 0.1)

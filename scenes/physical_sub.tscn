@@ -15,8 +15,8 @@ metadata/_custom_type_script = "uid://basucvdev4q1f"
 shape = SubResource("RectangleShape2D_plsu0")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=316176606]
-visible = false
 position = Vector2(4, -7)
+scale = Vector2(10, 10)
 texture = ExtResource("2_ruc46")
 
 [node name="OrbitPoints" type="Node2D" parent="." unique_id=1262405611]
