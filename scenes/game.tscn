@@ -1,48 +1,23 @@
 [gd_scene format=3 uid="uid://owydjqr501u3"]
 
 [ext_resource type="Script" uid="uid://dk0bdgg7d0dbd" path="res://scripts/submarinedata.gd" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://b36sxc2lviqa2" path="res://scripts/subsystem.gd" id="2_yqjtg"]
+[ext_resource type="Resource" uid="uid://bylj8d6utmc73" path="res://resources/sonar_sys.tres" id="2_gee14"]
+[ext_resource type="Resource" uid="uid://ewinr1uvbhil" path="res://resources/engine_sys.tres" id="3_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://64t4xu0oowwh" path="res://scripts/subsystemvisual.gd" id="4_iywne"]
-
-[sub_resource type="Resource" id="Resource_lnu2h"]
-script = ExtResource("2_yqjtg")
-value = 67
-metadata/_custom_type_script = "uid://b36sxc2lviqa2"
-
-[sub_resource type="Resource" id="Resource_lbhrr"]
-script = ExtResource("2_yqjtg")
-id = 1
-value = null
-metadata/_custom_type_script = "uid://b36sxc2lviqa2"
-
-[sub_resource type="Resource" id="Resource_iywne"]
-script = ExtResource("2_yqjtg")
-id = 2
-value = null
-metadata/_custom_type_script = "uid://b36sxc2lviqa2"
-
-[sub_resource type="Resource" id="Resource_p57ef"]
-script = ExtResource("2_yqjtg")
-id = 3
-value = null
-metadata/_custom_type_script = "uid://b36sxc2lviqa2"
-
-[sub_resource type="Resource" id="Resource_u5sy4"]
-script = ExtResource("2_yqjtg")
-id = 4
-value = null
-metadata/_custom_type_script = "uid://b36sxc2lviqa2"
+[ext_resource type="Resource" uid="uid://bjj1gp7ajbkw" path="res://resources/flare_sys.tres" id="4_vtaks"]
+[ext_resource type="Resource" uid="uid://uepsc2ambpnu" path="res://resources/torpedo_sys.tres" id="5_kvpfn"]
+[ext_resource type="Resource" uid="uid://drfjl0siuf1j7" path="res://resources/oxygen_sys.tres" id="6_dinhu"]
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
 [node name="SubmarineData" type="Node" parent="." unique_id=383055807]
 script = ExtResource("1_uwrxv")
-sonar_system = SubResource("Resource_lnu2h")
-engines_system = SubResource("Resource_lbhrr")
-flares_system = SubResource("Resource_iywne")
-torpedoes_system = SubResource("Resource_p57ef")
-oxygen_system = SubResource("Resource_u5sy4")
+sonar_system = ExtResource("2_gee14")
+engines_system = ExtResource("3_0tnpc")
+flares_system = ExtResource("4_vtaks")
+torpedoes_system = ExtResource("5_kvpfn")
+oxygen_system = ExtResource("6_dinhu")
 metadata/_custom_type_script = "uid://dk0bdgg7d0dbd"
 
 [node name="SubsystemVisual" type="Sprite2D" parent="." unique_id=798652237 node_paths=PackedStringArray("sub_data")]
