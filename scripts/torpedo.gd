@@ -2,7 +2,7 @@ class_name Torpedo
 extends Area2D
 
 
-@export var speed: float = 400.0
+@export var speed: float
 var from_plr: bool = true
 
 var spawn_pos: Vector2
