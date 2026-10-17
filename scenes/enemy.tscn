@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b48fnkshn3x54"]
+
+[ext_resource type="Script" uid="uid://dvbfvmymtb82t" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="2_4ra3w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
+
+[node name="Enemy" type="Area2D" unique_id=386252729]
+script = ExtResource("1_md0e3")
+metadata/_custom_type_script = "uid://dvbfvmymtb82t"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=201942602]
+position = Vector2(-1, -3)
+texture = ExtResource("2_4ra3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=817175720]
+shape = SubResource("RectangleShape2D_5uy6h")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=328049047]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

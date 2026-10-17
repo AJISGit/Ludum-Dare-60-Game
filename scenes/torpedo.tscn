@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bf0w0nxofuhe2"]
+
+[ext_resource type="Script" uid="uid://dic14bm4osqae" path="res://scripts/torpedo.gd" id="1_0ddwc"]
+[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="2_agymq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tn8i"]
+size = Vector2(42, 6)
+
+[node name="Torpedo" type="Area2D" unique_id=1130819015]
+script = ExtResource("1_0ddwc")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1552373532]
+scale = Vector2(0.32692042, 0.040865228)
+texture = ExtResource("2_agymq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1793310653]
+shape = SubResource("RectangleShape2D_5tn8i")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

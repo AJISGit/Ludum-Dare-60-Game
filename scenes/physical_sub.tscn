@@ -6,69 +6,70 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plsu0"]
 size = Vector2(222, 94)
 
-[node name="PhysicalSub" type="Area2D" unique_id=25893487]
+[node name="PhysicalSub" type="CharacterBody2D" unique_id=299980349]
 script = ExtResource("1_b6fww")
+max_velocity = 350.0
 metadata/_custom_type_script = "uid://basucvdev4q1f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1472364011]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1979738507]
 shape = SubResource("RectangleShape2D_plsu0")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1449376708]
+[node name="Icon" type="Sprite2D" parent="." unique_id=316176606]
 position = Vector2(4, -7)
 texture = ExtResource("2_ruc46")
 
-[node name="OrbitPoints" type="Node2D" parent="." unique_id=1585944002]
+[node name="OrbitPoints" type="Node2D" parent="." unique_id=1262405611]
 
-[node name="Point0" type="Node2D" parent="OrbitPoints" unique_id=594750441]
+[node name="Point0" type="Node2D" parent="OrbitPoints" unique_id=847859014]
 position = Vector2(1110, 0)
 
-[node name="Point1" type="Node2D" parent="OrbitPoints" unique_id=1696097491]
+[node name="Point1" type="Node2D" parent="OrbitPoints" unique_id=1381317714]
 position = Vector2(1044, 364)
 
-[node name="Point2" type="Node2D" parent="OrbitPoints" unique_id=366871124]
+[node name="Point2" type="Node2D" parent="OrbitPoints" unique_id=73054821]
 position = Vector2(918, 567)
 
-[node name="Point3" type="Node2D" parent="OrbitPoints" unique_id=1189811781]
+[node name="Point3" type="Node2D" parent="OrbitPoints" unique_id=1150085728]
 position = Vector2(738, 715)
 
-[node name="Point4" type="Node2D" parent="OrbitPoints" unique_id=1332415706]
+[node name="Point4" type="Node2D" parent="OrbitPoints" unique_id=2023924640]
 position = Vector2(518, 849)
 
-[node name="Point5" type="Node2D" parent="OrbitPoints" unique_id=170957053]
+[node name="Point5" type="Node2D" parent="OrbitPoints" unique_id=1269408697]
 position = Vector2(34, 1066)
 
-[node name="Point6" type="Node2D" parent="OrbitPoints" unique_id=1154465899]
+[node name="Point6" type="Node2D" parent="OrbitPoints" unique_id=1713732920]
 position = Vector2(-428, 921)
 
-[node name="Point7" type="Node2D" parent="OrbitPoints" unique_id=318981241]
+[node name="Point7" type="Node2D" parent="OrbitPoints" unique_id=739440676]
 position = Vector2(-684, 754)
 
-[node name="Point8" type="Node2D" parent="OrbitPoints" unique_id=1854104032]
+[node name="Point8" type="Node2D" parent="OrbitPoints" unique_id=1132218504]
 position = Vector2(-906, 409)
 
-[node name="Point9" type="Node2D" parent="OrbitPoints" unique_id=2116619433]
+[node name="Point9" type="Node2D" parent="OrbitPoints" unique_id=928696546]
 position = Vector2(-1034, -75)
 
-[node name="Point10" type="Node2D" parent="OrbitPoints" unique_id=1048879014]
+[node name="Point10" type="Node2D" parent="OrbitPoints" unique_id=946868086]
 position = Vector2(-1045, -448)
 
-[node name="Point11" type="Node2D" parent="OrbitPoints" unique_id=1085186852]
+[node name="Point11" type="Node2D" parent="OrbitPoints" unique_id=1351935160]
 position = Vector2(-917, -670)
 
-[node name="Point12" type="Node2D" parent="OrbitPoints" unique_id=1370422600]
+[node name="Point12" type="Node2D" parent="OrbitPoints" unique_id=161083844]
 position = Vector2(-656, -915)
 
-[node name="Point13" type="Node2D" parent="OrbitPoints" unique_id=1104542272]
+[node name="Point13" type="Node2D" parent="OrbitPoints" unique_id=1031943266]
 position = Vector2(-299, -1076)
 
-[node name="Point14" type="Node2D" parent="OrbitPoints" unique_id=882329687]
+[node name="Point14" type="Node2D" parent="OrbitPoints" unique_id=1595098586]
 position = Vector2(223, -1093)
 
-[node name="Point15" type="Node2D" parent="OrbitPoints" unique_id=1512213276]
+[node name="Point15" type="Node2D" parent="OrbitPoints" unique_id=1101174933]
 position = Vector2(601, -870)
 
-[node name="Point16" type="Node2D" parent="OrbitPoints" unique_id=1345139350]
+[node name="Point16" type="Node2D" parent="OrbitPoints" unique_id=1717794486]
 position = Vector2(762, -720)
 
-[node name="Point17" type="Node2D" parent="OrbitPoints" unique_id=1002818690]
+[node name="Point17" type="Node2D" parent="OrbitPoints" unique_id=592250576]
 position = Vector2(951, -470)
