@@ -3,11 +3,10 @@
 [ext_resource type="Script" uid="uid://dk0bdgg7d0dbd" path="res://scripts/submarinedata.gd" id="1_uwrxv"]
 [ext_resource type="Resource" uid="uid://bylj8d6utmc73" path="res://resources/sonar_sys.tres" id="2_gee14"]
 [ext_resource type="Resource" uid="uid://ewinr1uvbhil" path="res://resources/engine_sys.tres" id="3_0tnpc"]
-[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="3_lbhrr"]
-[ext_resource type="Script" uid="uid://64t4xu0oowwh" path="res://scripts/subsystemvisual.gd" id="4_iywne"]
 [ext_resource type="Resource" uid="uid://bjj1gp7ajbkw" path="res://resources/flare_sys.tres" id="4_vtaks"]
 [ext_resource type="Resource" uid="uid://uepsc2ambpnu" path="res://resources/torpedo_sys.tres" id="5_kvpfn"]
 [ext_resource type="Resource" uid="uid://drfjl0siuf1j7" path="res://resources/oxygen_sys.tres" id="6_dinhu"]
+[ext_resource type="PackedScene" uid="uid://end0kh1yue57" path="res://scenes/game_world.tscn" id="7_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
@@ -20,9 +19,4 @@ torpedoes_system = ExtResource("5_kvpfn")
 oxygen_system = ExtResource("6_dinhu")
 metadata/_custom_type_script = "uid://dk0bdgg7d0dbd"
 
-[node name="SubsystemVisual" type="Sprite2D" parent="." unique_id=798652237 node_paths=PackedStringArray("sub_data")]
-position = Vector2(262, 245)
-texture = ExtResource("3_lbhrr")
-script = ExtResource("4_iywne")
-sub_data = NodePath("../SubmarineData")
-metadata/_custom_type_script = "uid://64t4xu0oowwh"
+[node name="GameWorld" parent="." unique_id=425142831 instance=ExtResource("7_u5sy4")]

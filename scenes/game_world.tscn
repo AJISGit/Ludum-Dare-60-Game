@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://end0kh1yue57"]
+
+[ext_resource type="Script" uid="uid://df5oloh41sf3p" path="res://scripts/world.gd" id="1_0biqy"]
+[ext_resource type="Script" uid="uid://basucvdev4q1f" path="res://scripts/physicalsub.gd" id="2_47u71"]
+[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="3_0vfqx"]
+[ext_resource type="Script" uid="uid://dvbfvmymtb82t" path="res://scripts/enemy.gd" id="4_wbbl4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tn8i"]
+size = Vector2(222, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2n43"]
+
+[node name="GameWorld" type="Node2D" unique_id=425142831]
+script = ExtResource("1_0biqy")
+
+[node name="PhysicalSub" type="Area2D" parent="." unique_id=1067888390]
+unique_name_in_owner = true
+position = Vector2(591, 351)
+script = ExtResource("2_47u71")
+metadata/_custom_type_script = "uid://basucvdev4q1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicalSub" unique_id=1993061094]
+shape = SubResource("RectangleShape2D_5tn8i")
+
+[node name="Icon" type="Sprite2D" parent="PhysicalSub" unique_id=1666344077]
+position = Vector2(4, -7)
+texture = ExtResource("3_0vfqx")
+
+[node name="Enemy" type="Area2D" parent="." unique_id=902810729]
+script = ExtResource("4_wbbl4")
+metadata/_custom_type_script = "uid://dvbfvmymtb82t"
+
+[node name="Icon" type="Sprite2D" parent="Enemy" unique_id=761281565]
+position = Vector2(-1, -3)
+texture = ExtResource("3_0vfqx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=564919062]
+shape = SubResource("RectangleShape2D_l2n43")
