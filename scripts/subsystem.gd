@@ -13,3 +13,9 @@ extends Resource
 @export var fix_speed: int = 0
 
 
+func get_percent_full() -> float:
+	return float(value) / max_value
+
+func get_percent_empty() -> float:
+	return float(max_value - value) / max_value
+

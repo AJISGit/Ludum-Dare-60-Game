@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dk0bdgg7d0dbd" path="res://scripts/submarinedata.gd" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://b36sxc2lviqa2" path="res://scripts/subsystem.gd" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="3_lbhrr"]
+[ext_resource type="Script" uid="uid://64t4xu0oowwh" path="res://scripts/subsystemvisual.gd" id="4_iywne"]
 
 [sub_resource type="Resource" id="Resource_lnu2h"]
 script = ExtResource("2_yqjtg")
-value = null
+value = 67
 metadata/_custom_type_script = "uid://b36sxc2lviqa2"
 
 [sub_resource type="Resource" id="Resource_lbhrr"]
@@ -42,3 +44,10 @@ flares_system = SubResource("Resource_iywne")
 torpedoes_system = SubResource("Resource_p57ef")
 oxygen_system = SubResource("Resource_u5sy4")
 metadata/_custom_type_script = "uid://dk0bdgg7d0dbd"
+
+[node name="SubsystemVisual" type="Sprite2D" parent="." unique_id=798652237 node_paths=PackedStringArray("sub_data")]
+position = Vector2(262, 245)
+texture = ExtResource("3_lbhrr")
+script = ExtResource("4_iywne")
+sub_data = NodePath("../SubmarineData")
+metadata/_custom_type_script = "uid://64t4xu0oowwh"
