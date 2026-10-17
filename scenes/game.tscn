@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://owydjqr501u3"]
 
+[ext_resource type="Script" uid="uid://bipnenea5sosw" path="res://scripts/sonar_test.gd" id="1_gee14"]
 [ext_resource type="Script" uid="uid://dk0bdgg7d0dbd" path="res://scripts/submarinedata.gd" id="1_uwrxv"]
 [ext_resource type="Resource" uid="uid://bylj8d6utmc73" path="res://resources/sonar_sys.tres" id="2_gee14"]
 [ext_resource type="Resource" uid="uid://ewinr1uvbhil" path="res://resources/engine_sys.tres" id="3_0tnpc"]
@@ -7,6 +8,9 @@
 [ext_resource type="Resource" uid="uid://uepsc2ambpnu" path="res://resources/torpedo_sys.tres" id="5_kvpfn"]
 [ext_resource type="Resource" uid="uid://drfjl0siuf1j7" path="res://resources/oxygen_sys.tres" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://end0kh1yue57" path="res://scenes/game_world.tscn" id="7_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="8_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="10_vtaks"]
+[ext_resource type="Texture2D" uid="uid://bnmysoi4lmk3b" path="res://sprites/SonarSpinnyThing.png" id="11_kvpfn"]
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
@@ -19,4 +23,28 @@ torpedoes_system = ExtResource("5_kvpfn")
 oxygen_system = ExtResource("6_dinhu")
 metadata/_custom_type_script = "uid://dk0bdgg7d0dbd"
 
-[node name="GameWorld" parent="." unique_id=425142831 instance=ExtResource("7_u5sy4")]
+[node name="Icon" type="Sprite2D" parent="." unique_id=520545395]
+position = Vector2(366, 248)
+scale = Vector2(100, 100)
+texture = ExtResource("8_0tnpc")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=462260243]
+offset_left = 250.0
+offset_right = 290.0
+offset_bottom = 40.0
+script = ExtResource("1_gee14")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=387261511]
+unique_name_in_owner = true
+size = Vector2i(601, 601)
+
+[node name="GameWorld" parent="SubViewport" unique_id=425142831 instance=ExtResource("7_u5sy4")]
+
+[node name="SonarThing" type="Sprite2D" parent="." unique_id=2083012388]
+position = Vector2(550, 302)
+texture = ExtResource("10_vtaks")
+
+[node name="SonarSpinnyThing" type="Sprite2D" parent="." unique_id=180229485]
+unique_name_in_owner = true
+position = Vector2(550, 302)
+texture = ExtResource("11_kvpfn")

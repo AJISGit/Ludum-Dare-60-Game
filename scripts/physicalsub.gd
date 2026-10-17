@@ -42,11 +42,4 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	if (position.x > 3825):
-		position.x = -3825
-	if (position.x < -3825):
-		position.x = 3825
-	if (position.y < -2000):
-		position.y = 2000
-	if (position.y > 2000):
-		position.y = -2000
+	

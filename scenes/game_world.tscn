@@ -7,12 +7,23 @@
 [node name="GameWorld" type="Node2D" unique_id=425142831]
 script = ExtResource("1_0biqy")
 
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=849206651]
+position = Vector2(546, 169)
+scale = Vector2(106.90435, 88.632416)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-1127, -950, 2190, -984, 2217, 1552, -932, 1526)
+
 [node name="PhysicalSub" parent="." unique_id=25893487 instance=ExtResource("2_0vfqx")]
 unique_name_in_owner = true
+visible = false
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(478, 334)
+scale = Vector2(0.05, 0.05)
+max_velocity = 400.0
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1008547821]
-zoom = Vector2(0.15, 0.15)
+[node name="Camera2D" type="Camera2D" parent="PhysicalSub" unique_id=1970256948]
 
 [node name="Enemy" parent="." unique_id=386252729 instance=ExtResource("3_ywgp6")]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(-1144, -2014)
+scale = Vector2(0.05, 0.05)
