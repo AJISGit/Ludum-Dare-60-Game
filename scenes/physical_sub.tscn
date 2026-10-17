@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bq8c36f6yfj3p"]
+
+[ext_resource type="Script" uid="uid://basucvdev4q1f" path="res://scripts/physicalsub.gd" id="1_b6fww"]
+[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="2_ruc46"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plsu0"]
+size = Vector2(222, 94)
+
+[node name="PhysicalSub" type="Area2D" unique_id=25893487]
+script = ExtResource("1_b6fww")
+metadata/_custom_type_script = "uid://basucvdev4q1f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1472364011]
+shape = SubResource("RectangleShape2D_plsu0")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1449376708]
+position = Vector2(4, -7)
+texture = ExtResource("2_ruc46")
+
+[node name="OrbitPoints" type="Node2D" parent="." unique_id=1585944002]
+
+[node name="Point0" type="Node2D" parent="OrbitPoints" unique_id=594750441]
+position = Vector2(1110, 0)
+
+[node name="Point1" type="Node2D" parent="OrbitPoints" unique_id=1696097491]
+position = Vector2(1044, 364)
+
+[node name="Point2" type="Node2D" parent="OrbitPoints" unique_id=366871124]
+position = Vector2(918, 567)
+
+[node name="Point3" type="Node2D" parent="OrbitPoints" unique_id=1189811781]
+position = Vector2(738, 715)
+
+[node name="Point4" type="Node2D" parent="OrbitPoints" unique_id=1332415706]
+position = Vector2(518, 849)
+
+[node name="Point5" type="Node2D" parent="OrbitPoints" unique_id=170957053]
+position = Vector2(34, 1066)
+
+[node name="Point6" type="Node2D" parent="OrbitPoints" unique_id=1154465899]
+position = Vector2(-428, 921)
+
+[node name="Point7" type="Node2D" parent="OrbitPoints" unique_id=318981241]
+position = Vector2(-684, 754)
+
+[node name="Point8" type="Node2D" parent="OrbitPoints" unique_id=1854104032]
+position = Vector2(-906, 409)
+
+[node name="Point9" type="Node2D" parent="OrbitPoints" unique_id=2116619433]
+position = Vector2(-1034, -75)
+
+[node name="Point10" type="Node2D" parent="OrbitPoints" unique_id=1048879014]
+position = Vector2(-1045, -448)
+
+[node name="Point11" type="Node2D" parent="OrbitPoints" unique_id=1085186852]
+position = Vector2(-917, -670)
+
+[node name="Point12" type="Node2D" parent="OrbitPoints" unique_id=1370422600]
+position = Vector2(-656, -915)
+
+[node name="Point13" type="Node2D" parent="OrbitPoints" unique_id=1104542272]
+position = Vector2(-299, -1076)
+
+[node name="Point14" type="Node2D" parent="OrbitPoints" unique_id=882329687]
+position = Vector2(223, -1093)
+
+[node name="Point15" type="Node2D" parent="OrbitPoints" unique_id=1512213276]
+position = Vector2(601, -870)
+
+[node name="Point16" type="Node2D" parent="OrbitPoints" unique_id=1345139350]
+position = Vector2(762, -720)
+
+[node name="Point17" type="Node2D" parent="OrbitPoints" unique_id=1002818690]
+position = Vector2(951, -470)

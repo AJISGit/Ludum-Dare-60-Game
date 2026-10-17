@@ -7,3 +7,7 @@ extends Area2D
 
 func _ready() -> void:
 	print("Hey")
+
+func _physics_process(delta: float) -> void:
+	$OrbitPoints.rotation += PI * 0.1 * delta
+
