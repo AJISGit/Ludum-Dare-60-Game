@@ -8,6 +8,7 @@ size = Vector2(42, 6)
 
 [node name="Torpedo" type="Area2D" unique_id=1130819015]
 script = ExtResource("1_0ddwc")
+speed = 1.0
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1552373532]
 scale = Vector2(0.32692042, 0.040865228)

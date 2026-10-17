@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://end0kh1yue57" path="res://scenes/game_world.tscn" id="7_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="8_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="10_vtaks"]
-[ext_resource type="Texture2D" uid="uid://bnmysoi4lmk3b" path="res://sprites/SonarSpinnyThing.png" id="11_kvpfn"]
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
@@ -43,9 +42,3 @@ size = Vector2i(601, 601)
 [node name="SonarThing" type="Sprite2D" parent="." unique_id=2083012388]
 position = Vector2(550, 302)
 texture = ExtResource("10_vtaks")
-
-[node name="SonarSpinnyThing" type="Sprite2D" parent="." unique_id=180229485]
-unique_name_in_owner = true
-visible = false
-position = Vector2(550, 302)
-texture = ExtResource("11_kvpfn")
