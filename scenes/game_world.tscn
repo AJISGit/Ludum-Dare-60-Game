@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://df5oloh41sf3p" path="res://scripts/world.gd" id="1_0biqy"]
 [ext_resource type="PackedScene" uid="uid://bq8c36f6yfj3p" path="res://scenes/physical_sub.tscn" id="2_0vfqx"]
 [ext_resource type="PackedScene" uid="uid://b48fnkshn3x54" path="res://scenes/enemy.tscn" id="3_ywgp6"]
+[ext_resource type="PackedScene" uid="uid://b85bybpeos74a" path="res://scenes/sonar_spinny_thing.tscn" id="4_0vfqx"]
 
 [node name="GameWorld" type="Node2D" unique_id=425142831]
 script = ExtResource("1_0biqy")
@@ -26,4 +27,10 @@ max_velocity = 400.0
 [node name="Enemy" parent="." unique_id=386252729 instance=ExtResource("3_ywgp6")]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(-1144, -2014)
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.1, 0.1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1077814324]
+
+[node name="SonarSpinnyThing2" parent="." unique_id=1157046897 instance=ExtResource("4_0vfqx")]
+position = Vector2(300, 302)
+scale = Vector2(0.9999997, 0.9999997)

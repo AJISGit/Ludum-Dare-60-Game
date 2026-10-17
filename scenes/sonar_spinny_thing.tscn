@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b85bybpeos74a"]
+
+[ext_resource type="Script" uid="uid://bqb6s3wdunvrk" path="res://scripts/sonar_spinny_thing.gd" id="1_xgw3u"]
+[ext_resource type="Texture2D" uid="uid://bnmysoi4lmk3b" path="res://sprites/SonarSpinnyThing.png" id="2_uksc2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vfqx"]
+size = Vector2(602, 6)
+
+[node name="SonarSpinnyThing" type="Area2D" unique_id=1157046897]
+script = ExtResource("1_xgw3u")
+metadata/_custom_type_script = "uid://bqb6s3wdunvrk"
+
+[node name="SonarSpinnyThing" type="Sprite2D" parent="." unique_id=1962484549]
+unique_name_in_owner = true
+texture = ExtResource("2_uksc2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1825128880]
+position = Vector2(301, 0)
+shape = SubResource("RectangleShape2D_0vfqx")

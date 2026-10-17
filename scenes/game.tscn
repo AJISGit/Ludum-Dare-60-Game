@@ -46,5 +46,6 @@ texture = ExtResource("10_vtaks")
 
 [node name="SonarSpinnyThing" type="Sprite2D" parent="." unique_id=180229485]
 unique_name_in_owner = true
+visible = false
 position = Vector2(550, 302)
 texture = ExtResource("11_kvpfn")

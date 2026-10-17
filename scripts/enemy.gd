@@ -16,20 +16,17 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 
+	if (position.distance_to(orbit_point.global_position) < 5):
+		#reached_point = true
+		print("Locked on")
+		pass
 	# Code recycled from my last game jam game: https://ajisboss.itch.io/countdown-to-powerdown
-	if (!reached_point):
-		look_at(orbit_point.global_position)
-		position += Vector2(1.0, 0.0).rotated(rotation) * 100.0 * delta
-		rotation = 0
+	look_at(orbit_point.global_position)
+	position += Vector2(1.0, 0.0).rotated(rotation) * 100.0 * delta
+	rotation = 0
 
-		if (position.distance_to(orbit_point.global_position) < 5):
-			#reached_point = true
-			print("Locked on")
-			position = orbit_point.global_position
 
-	else:
-		position = orbit_point.global_position
-
+			
 
 func shoot() -> void:
 	var bullet: Torpedo = TORPEDO_RESOURCE.instantiate()
