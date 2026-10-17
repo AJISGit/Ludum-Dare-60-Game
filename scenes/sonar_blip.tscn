@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://ef5ejo5nxlss"]
 
-[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="1_fi0gf"]
+[ext_resource type="Texture2D" uid="uid://ccg7bqibbj3ef" path="res://sprites/SonarBlip.png" id="1_fi0gf"]
 [ext_resource type="Script" uid="uid://2uf8b4ig0ydt" path="res://scripts/radar_blip.gd" id="2_0dl35"]
 
-[node name="SonarBlip" type="Sprite2D" unique_id=706484526 node_paths=PackedStringArray("die_timer")]
+[node name="SonarBlip" type="Sprite2D" unique_id=706484526]
 texture = ExtResource("1_fi0gf")
 script = ExtResource("2_0dl35")
-die_timer = NodePath("Timer")
+die_speed = 1.0
 metadata/_custom_type_script = "uid://2uf8b4ig0ydt"
 
 [node name="Timer" type="Timer" parent="." unique_id=798933506]
 wait_time = 0.1
-autostart = true
