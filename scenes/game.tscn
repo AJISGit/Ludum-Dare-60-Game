@@ -1,9 +1,44 @@
 [gd_scene format=3 uid="uid://owydjqr501u3"]
 
 [ext_resource type="Script" uid="uid://dk0bdgg7d0dbd" path="res://scripts/submarinedata.gd" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://b36sxc2lviqa2" path="res://scripts/subsystem.gd" id="2_yqjtg"]
+
+[sub_resource type="Resource" id="Resource_lnu2h"]
+script = ExtResource("2_yqjtg")
+value = null
+metadata/_custom_type_script = "uid://b36sxc2lviqa2"
+
+[sub_resource type="Resource" id="Resource_lbhrr"]
+script = ExtResource("2_yqjtg")
+id = 1
+value = null
+metadata/_custom_type_script = "uid://b36sxc2lviqa2"
+
+[sub_resource type="Resource" id="Resource_iywne"]
+script = ExtResource("2_yqjtg")
+id = 2
+value = null
+metadata/_custom_type_script = "uid://b36sxc2lviqa2"
+
+[sub_resource type="Resource" id="Resource_p57ef"]
+script = ExtResource("2_yqjtg")
+id = 3
+value = null
+metadata/_custom_type_script = "uid://b36sxc2lviqa2"
+
+[sub_resource type="Resource" id="Resource_u5sy4"]
+script = ExtResource("2_yqjtg")
+id = 4
+value = null
+metadata/_custom_type_script = "uid://b36sxc2lviqa2"
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
 [node name="SubmarineData" type="Node" parent="." unique_id=383055807]
 script = ExtResource("1_uwrxv")
+sonar_system = SubResource("Resource_lnu2h")
+engines_system = SubResource("Resource_lbhrr")
+flares_system = SubResource("Resource_iywne")
+torpedoes_system = SubResource("Resource_p57ef")
+oxygen_system = SubResource("Resource_u5sy4")
 metadata/_custom_type_script = "uid://dk0bdgg7d0dbd"
