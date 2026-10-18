@@ -11,3 +11,9 @@ metadata/_custom_type_script = "uid://64t4xu0oowwh"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2109086391]
 shape = SubResource("RectangleShape2D_5tn8i")
+
+[node name="Npc1" type="Node2D" parent="." unique_id=159536431]
+position = Vector2(-9, 16)
+
+[node name="Npc2" type="Node2D" parent="." unique_id=751583703]
+position = Vector2(9, 16)

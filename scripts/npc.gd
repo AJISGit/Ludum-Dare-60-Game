@@ -8,6 +8,7 @@ var mouse_inside: bool = false
 var clicked: bool = false
 @onready var crew_world: CrewWorld = get_parent().get_parent()
 @export var start_room: int = 0
+@export var npc_num: int = 1
 
 
 func on_mouse_entered():
@@ -86,4 +87,9 @@ func set_room(id: int):
 	new_sys.npcs += 1
 
 	var visual_sys: SubsystemVisual = crew_world.get_subsystem_visual(id)
-	position = visual_sys.position
+	if (npc_num == 1):
+		position = visual_sys.get_node("Npc1").global_position
+	else:
+		position = visual_sys.get_node("Npc2").global_position
+
+	position.y -= 8.0
