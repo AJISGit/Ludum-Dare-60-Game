@@ -1,16 +1,32 @@
 class_name Npc
-extends AnimatedSprite2D
+extends Area2D
 
 
 var room_id: int = 0
 var sub_data: SubmarineData
+var mouse_inside: bool = false
 @onready var crew_world: CrewWorld = get_parent().get_parent()
+
+
+func on_mouse_entered():
+	mouse_inside = true
+func on_mouse_exited():
+	mouse_inside = false
+
+func _input(event: InputEvent) -> void:
+	if (event.is_action_pressed("mouse_click") && mouse_inside):
+		print("Npc click")
 
 
 func _ready() -> void:
 
+	connect("mouse_entered", on_mouse_entered)
+	connect("mouse_exited", on_mouse_exited)
+
 	sub_data = crew_world.sub_data
 	set_room(0)
+	
+	
 
 
 func set_room(id: int):

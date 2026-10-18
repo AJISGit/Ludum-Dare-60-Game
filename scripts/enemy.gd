@@ -17,8 +17,6 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 
 	if (position.distance_to(orbit_point.global_position) < 5):
-		#reached_point = true
-		print("Locked on")
 		pass
 	# Code recycled from my last game jam game: https://ajisboss.itch.io/countdown-to-powerdown
 	look_at(orbit_point.global_position)
