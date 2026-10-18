@@ -5,6 +5,7 @@ extends Area2D
 var room_id: int = 0
 var sub_data: SubmarineData
 var mouse_inside: bool = false
+var clicked: bool = false
 @onready var crew_world: CrewWorld = get_parent().get_parent()
 
 
@@ -14,8 +15,42 @@ func on_mouse_exited():
 	mouse_inside = false
 
 func _input(event: InputEvent) -> void:
-	if (event.is_action_pressed("mouse_click") && mouse_inside):
+	if (event.is_action_pressed("mouse_click")):
+
 		print("Npc click")
+		
+		if (clicked):
+
+			var clicked_room: SubsystemVisual
+			for child in get_parent().get_parent().get_children():
+				var room: SubsystemVisual = child as SubsystemVisual
+				if (!room):
+					continue
+
+				if (!room.mouse_inside):
+					continue
+
+				clicked_room = room
+				print("Found it")
+				break
+
+			if (!clicked_room):
+				clicked = false
+				print("Never mind")
+				return
+
+			print("Room: " + clicked_room.name)
+			set_room(clicked_room.sys_id)
+			clicked = false
+
+		else:
+
+			if (!mouse_inside): return
+
+			clicked = true
+
+
+
 
 
 func _ready() -> void:
@@ -24,12 +59,17 @@ func _ready() -> void:
 	connect("mouse_exited", on_mouse_exited)
 
 	sub_data = crew_world.sub_data
-	set_room(0)
-	
-	
+	set_room(3)
+
+func _process(delta: float) -> void:
+	if (clicked):
+		modulate = Color(1.5, 1.5, 1.5)
+	else:
+		modulate = Color(1.0, 1.0, 1.0)
 
 
 func set_room(id: int):
+	print("Next room: " + str(id))
 	var old_sys: Subsystem = sub_data.get_subsystem(room_id)
 	room_id = id
 	var new_sys: Subsystem = sub_data.get_subsystem(id)
