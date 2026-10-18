@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Subsystem" format=3 uid="uid://b6pxeb8po3c21"]
+
+[ext_resource type="Script" uid="uid://b36sxc2lviqa2" path="res://scripts/subsystem.gd" id="1_1d1cx"]
+
+[resource]
+script = ExtResource("1_1d1cx")
+id = 3
+value = 100
+metadata/_custom_type_script = "uid://b36sxc2lviqa2"

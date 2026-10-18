@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
 
 [node name="Enemy" type="Area2D" unique_id=386252729]
+visible = false
 script = ExtResource("1_md0e3")
 metadata/_custom_type_script = "uid://dvbfvmymtb82t"
 

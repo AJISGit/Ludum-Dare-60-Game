@@ -11,6 +11,7 @@ extends Resource
 		value = new_value
 
 @export var fix_speed: int = 0
+var npcs: int = 0
 
 
 func get_percent_full() -> float:

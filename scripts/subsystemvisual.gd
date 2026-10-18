@@ -1,8 +1,8 @@
 class_name SubsystemVisual
-extends Sprite2D
+extends Area2D
 
 
-@export var sub_data: SubmarineData
+@onready var sub_data: SubmarineData = $"../../SubmarineData"
 @export var sys_id: int = 0
 var sys: Subsystem
 

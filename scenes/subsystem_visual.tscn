@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://db0umy3lh312h"]
+
+[ext_resource type="Script" uid="uid://64t4xu0oowwh" path="res://scripts/subsystemvisual.gd" id="1_6mx2p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tn8i"]
+size = Vector2(32, 32)
+
+[node name="SubsystemVisual" type="Area2D" unique_id=281195999]
+script = ExtResource("1_6mx2p")
+metadata/_custom_type_script = "uid://64t4xu0oowwh"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2109086391]
+shape = SubResource("RectangleShape2D_5tn8i")
