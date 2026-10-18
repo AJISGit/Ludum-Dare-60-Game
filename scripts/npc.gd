@@ -7,6 +7,7 @@ var sub_data: SubmarineData
 var mouse_inside: bool = false
 var clicked: bool = false
 @onready var crew_world: CrewWorld = get_parent().get_parent()
+@export var start_room: int = 0
 
 
 func on_mouse_entered():
@@ -29,6 +30,13 @@ func _input(event: InputEvent) -> void:
 
 				if (!room.mouse_inside):
 					continue
+
+				for npc in $"../".get_children():
+					if (npc == self):
+						continue
+					if (npc.mouse_inside):
+						clicked = false
+						return
 
 				clicked_room = room
 				print("Found it")
@@ -59,7 +67,7 @@ func _ready() -> void:
 	connect("mouse_exited", on_mouse_exited)
 
 	sub_data = crew_world.sub_data
-	set_room(3)
+	set_room(start_room)
 
 func _process(delta: float) -> void:
 	if (clicked):
@@ -79,4 +87,3 @@ func set_room(id: int):
 
 	var visual_sys: SubsystemVisual = crew_world.get_subsystem_visual(id)
 	position = visual_sys.position
-
