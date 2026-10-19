@@ -14,7 +14,7 @@ func _ready() -> void:
 	connect("body_entered", _on_body_entered)
 
 func _process(delta: float) -> void:
-	control_sys = get_parent().get_parent().get_parent().get_node("SubmarineData").control_system
+	control_sys = get_parent().get_parent().get_parent().get_parent().get_node("SubmarineData").control_system
 	position = %PhysicalSub.position
 	position.y += 2
 	if (control_sys.value < control_sys.max_value):

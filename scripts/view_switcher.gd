@@ -18,13 +18,11 @@ func switch_to(new_view: View):
 		$"../CrewWorld/Camera2D".enabled = false
 		$"../CrewWorld".visible = false
 
-#		$"../SonarThing".visible = true
-		$"../TextureRect2".visible = true
+		%SubViewport.get_parent().visible = true
 		%SubViewport/GameWorld.visible = true
 		%SubViewport/GameWorld/PhysicalSub/Camera2D.enabled = true
 	else:
-		$"../SonarThing".visible = false
-		$"../TextureRect2".visible = false
+		%SubViewport.get_parent().visible = false
 		%SubViewport/GameWorld.visible = false
 		%SubViewport/GameWorld/PhysicalSub/Camera2D.enabled = false
 

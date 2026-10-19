@@ -37,14 +37,6 @@ offset_right = 290.0
 offset_bottom = 40.0
 script = ExtResource("1_gee14")
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=387261511]
-unique_name_in_owner = true
-audio_listener_enable_2d = true
-size = Vector2i(601, 601)
-
-[node name="GameWorld" parent="SubViewport" unique_id=425142831 instance=ExtResource("7_u5sy4")]
-visible = false
-
 [node name="SonarThing" type="Sprite2D" parent="." unique_id=2083012388]
 visible = false
 position = Vector2(550, 302)
@@ -63,3 +55,18 @@ stream = ExtResource("12_dinhu")
 autoplay = true
 script = ExtResource("13_kvuet")
 metadata/_custom_type_script = "uid://c558yqssehsiy"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1301352944]
+offset_left = 250.0
+offset_right = 290.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=387261511]
+unique_name_in_owner = true
+handle_input_locally = false
+audio_listener_enable_2d = true
+size = Vector2i(601, 601)
+render_target_update_mode = 4
+
+[node name="GameWorld" parent="SubViewportContainer/SubViewport" unique_id=425142831 instance=ExtResource("7_u5sy4")]
+visible = false

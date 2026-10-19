@@ -10,6 +10,13 @@ var spawn_pos: Vector2
 var physical_sub: PhysicalSub
 
 
+
+
+
+func _ready() -> void:
+	connect("body_entered", _on_body_entered)
+
+
 func _physics_process(delta: float) -> void:
 	position += Vector2(1.0, 0.0).rotated(rotation) * speed * delta
 
@@ -29,3 +36,10 @@ func _on_area_entered(body: Node2D):
 		body.queue_free()
 	
 	queue_free()
+
+
+func _on_body_entered(body: Node2D):
+	if (body == physical_sub):
+		if (from_plr): return
+		print("boom")
+		#body.get_node("Icon").visible = false
