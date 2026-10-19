@@ -83,7 +83,7 @@ volume_db = -10.0
 [node name="EndThing" type="Sprite2D" parent="." unique_id=281653843]
 unique_name_in_owner = true
 visible = false
-position = Vector2(502, -9532)
+position = Vector2(502, -20000)
 texture = ExtResource("8_pdbwf")
 script = ExtResource("9_u1jpj")
 
@@ -91,5 +91,6 @@ script = ExtResource("9_u1jpj")
 script = ExtResource("2_uh34q")
 enemy_resource = ExtResource("3_ywgp6")
 enemy_count = 1
-enemy_distance = 700.0
+enemy_distance = 600.0
+rounds_till_change = 3
 metadata/_custom_type_script = "uid://dnge0dt72twf0"
