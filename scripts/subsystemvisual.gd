@@ -27,5 +27,6 @@ func _ready() -> void:
 	connect("mouse_exited", on_mouse_exited)
 
 func _process(_delta: float) -> void:
-	modulate.g = sys.get_percent_full() * 1.0
-	modulate.b = sys.get_percent_full() * 1.0
+	#print("Sys " + str(sys_id) + " % full: " + str(sys.get_percent_full()))
+	modulate.g = sys.get_percent_full()
+	modulate.b = sys.get_percent_full()

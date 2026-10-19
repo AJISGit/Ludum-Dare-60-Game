@@ -26,3 +26,10 @@ func get_subsystem(id: int) -> Subsystem:
 		return control_system
 	else:
 		return null
+
+
+func _process(delta: float) -> void:
+	engines_system.update(delta)
+	torpedoes_system.update(delta)
+	oxygen_system.update(delta)
+	control_system.update(delta)

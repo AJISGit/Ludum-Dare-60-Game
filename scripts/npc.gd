@@ -6,6 +6,7 @@ var room_id: int = 0
 var sub_data: SubmarineData
 var mouse_inside: bool = false
 var clicked: bool = false
+var start: bool = true
 @onready var crew_world: CrewWorld = get_parent().get_parent()
 @export var start_room: int = 0
 @export var npc_num: int = 1
@@ -69,6 +70,8 @@ func _ready() -> void:
 
 	sub_data = crew_world.sub_data
 	set_room(start_room)
+	sub_data.get_subsystem(room_id).npcs = 1
+
 
 func _process(delta: float) -> void:
 	if (clicked):
@@ -83,7 +86,9 @@ func set_room(id: int):
 	room_id = id
 	var new_sys: Subsystem = sub_data.get_subsystem(id)
 
-	old_sys.npcs -=1
+	if (!start):
+		old_sys.npcs -=1
+	start = false
 	new_sys.npcs += 1
 
 	var visual_sys: SubsystemVisual = crew_world.get_subsystem_visual(id)
