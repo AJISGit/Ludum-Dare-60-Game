@@ -18,6 +18,7 @@ font = ExtResource("6_6c6v5")
 
 [node name="GameWorld" type="Node2D" unique_id=425142831]
 script = ExtResource("1_0biqy")
+metadata/_edit_horizontal_guides_ = [-2570.0]
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=849206651]
 position = Vector2(546, 169)
@@ -81,7 +82,8 @@ volume_db = -10.0
 
 [node name="EndThing" type="Sprite2D" parent="." unique_id=281653843]
 unique_name_in_owner = true
-position = Vector2(502, -349)
+visible = false
+position = Vector2(502, -9532)
 texture = ExtResource("8_pdbwf")
 script = ExtResource("9_u1jpj")
 

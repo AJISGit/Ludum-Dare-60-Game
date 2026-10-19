@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		pass
 	# Code recycled from my last game jam game: https://ajisboss.itch.io/countdown-to-powerdown
 	look_at(orbit_point.global_position)
-	position += Vector2(1.0, 0.0).rotated(rotation) * 100.0 * delta
+	position += Vector2(1.0, 0.0).rotated(rotation) * 150.0 * delta
 	rotation = 0
 
 

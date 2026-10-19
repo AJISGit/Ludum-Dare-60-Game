@@ -18,7 +18,7 @@ texture = ExtResource("2_4ra3w")
 shape = SubResource("RectangleShape2D_5uy6h")
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=328049047]
-wait_time = 5.0
+wait_time = 9.0
 autostart = true
 
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

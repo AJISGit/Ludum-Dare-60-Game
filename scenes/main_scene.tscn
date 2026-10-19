@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dtdtrabuhyace"]
 
-[ext_resource type="PackedScene" uid="uid://owydjqr501u3" path="res://scenes/game.tscn" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://cix80r7ukay8p" path="res://main_menu.tscn" id="1_pw63i"]
 
 [node name="MainScene" type="Node2D" unique_id=324674365]
 
-[node name="Game" parent="." unique_id=1595279973 instance=ExtResource("1_w2twt")]
+[node name="Menu" parent="." unique_id=835912587 instance=ExtResource("1_pw63i")]
+position = Vector2(0, 200)

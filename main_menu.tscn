@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cix80r7ukay8p"]
+
+[ext_resource type="FontFile" uid="uid://bi1iccf63nn47" path="res://fonts/press-start-2p-latin-400-normal.ttf" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://d02dv8xbjtj82" path="res://scripts/button.gd" id="2_7vrkn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5tn8i"]
+font = ExtResource("1_06t4h")
+
+[node name="Menu" type="Node2D" unique_id=835912587]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1274979700]
+position = Vector2(546, 169)
+scale = Vector2(106.90435, 88.632416)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-1127, -950, 2190, -984, 2217, 1552, -932, 1526)
+
+[node name="Label" type="Label" parent="." unique_id=1592604070]
+offset_left = 414.0
+offset_right = 686.0
+offset_bottom = 23.0
+text = "Subaquatic Demise"
+label_settings = SubResource("LabelSettings_5tn8i")
+
+[node name="Button" type="Button" parent="." unique_id=1842226617]
+offset_left = 512.0
+offset_top = 137.0
+offset_right = 584.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("1_06t4h")
+text = "Play"
+script = ExtResource("2_7vrkn")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
