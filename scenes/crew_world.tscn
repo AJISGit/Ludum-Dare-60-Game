@@ -30,7 +30,7 @@ region_enabled = true
 region_rect = Rect2(100, 1, 32, 32)
 
 [node name="TorpedoRoom" parent="." unique_id=306530181 instance=ExtResource("5_71re0")]
-position = Vector2(47, 8)
+position = Vector2(5, 8)
 scale = Vector2(1.2, 1.2)
 sys_id = 1
 
@@ -40,7 +40,7 @@ region_enabled = true
 region_rect = Rect2(1, 1, 32, 32)
 
 [node name="OxygenRoom" parent="." unique_id=1959179206 instance=ExtResource("5_71re0")]
-position = Vector2(-24, 8)
+position = Vector2(-1359, -581)
 scale = Vector2(1.2, 1.2)
 sys_id = 2
 
