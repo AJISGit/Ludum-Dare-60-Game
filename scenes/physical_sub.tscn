@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bq8c36f6yfj3p"]
 
 [ext_resource type="Script" uid="uid://basucvdev4q1f" path="res://scripts/physicalsub.gd" id="1_b6fww"]
-[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="2_ruc46"]
+[ext_resource type="Texture2D" uid="uid://depogwvxonssf" path="res://sprites/sonarsubicon.png" id="2_b6fww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plsu0"]
-size = Vector2(222, 94)
+size = Vector2(222, 478)
 
 [node name="PhysicalSub" type="CharacterBody2D" unique_id=299980349]
 script = ExtResource("1_b6fww")
@@ -12,12 +12,13 @@ max_velocity = 350.0
 metadata/_custom_type_script = "uid://basucvdev4q1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1979738507]
+position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_plsu0")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=316176606]
 position = Vector2(4, -7)
-scale = Vector2(10, 10)
-texture = ExtResource("2_ruc46")
+scale = Vector2(20, 20)
+texture = ExtResource("2_b6fww")
 
 [node name="OrbitPoints" type="Node2D" parent="." unique_id=1262405611]
 
