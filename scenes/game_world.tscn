@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://df5oloh41sf3p" path="res://scripts/world.gd" id="1_0biqy"]
 [ext_resource type="PackedScene" uid="uid://bq8c36f6yfj3p" path="res://scenes/physical_sub.tscn" id="2_0vfqx"]
+[ext_resource type="Script" uid="uid://dnge0dt72twf0" path="res://scripts/enemy_spawner.gd" id="2_uh34q"]
 [ext_resource type="PackedScene" uid="uid://b48fnkshn3x54" path="res://scenes/enemy.tscn" id="3_ywgp6"]
 [ext_resource type="PackedScene" uid="uid://b85bybpeos74a" path="res://scenes/sonar_spinny_thing.tscn" id="4_0vfqx"]
 [ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="5_wbbl4"]
@@ -35,26 +36,6 @@ scale = Vector2(19.999998, 19.999998)
 texture = ExtResource("5_wbbl4")
 
 [node name="Camera2D" type="Camera2D" parent="PhysicalSub" unique_id=1970256948]
-
-[node name="Enemy" parent="." unique_id=386252729 instance=ExtResource("3_ywgp6")]
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-position = Vector2(262, 300.99994)
-scale = Vector2(0.1, 0.1)
-
-[node name="Enemy2" parent="." unique_id=1322219715 instance=ExtResource("3_ywgp6")]
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-position = Vector2(987.99994, -29.99997)
-scale = Vector2(0.1, 0.1)
-
-[node name="Enemy3" parent="." unique_id=97348620 instance=ExtResource("3_ywgp6")]
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-position = Vector2(119, 1043.9999)
-scale = Vector2(0.1, 0.1)
-
-[node name="Enemy4" parent="." unique_id=936535457 instance=ExtResource("3_ywgp6")]
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-position = Vector2(-1112.9999, 338.00018)
-scale = Vector2(0.1, 0.1)
 
 [node name="SonarSpinnyThing2" parent="." unique_id=1157046897 instance=ExtResource("4_0vfqx")]
 position = Vector2(300, 302)
@@ -92,3 +73,10 @@ volume_db = -10.0
 position = Vector2(502, -349)
 texture = ExtResource("8_pdbwf")
 script = ExtResource("9_u1jpj")
+
+[node name="EnemySpawner" type="Node" parent="." unique_id=1557261645]
+script = ExtResource("2_uh34q")
+enemy_resource = ExtResource("3_ywgp6")
+enemy_count = 1
+enemy_distance = 700.0
+metadata/_custom_type_script = "uid://dnge0dt72twf0"

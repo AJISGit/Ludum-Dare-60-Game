@@ -2,13 +2,14 @@ class_name Enemy
 extends Area2D
 
 
-@onready var physical_sub: PhysicalSub = %PhysicalSub
+var physical_sub: PhysicalSub
 var orbit_point: Node2D
 var reached_point: bool = false
 const TORPEDO_RESOURCE: PackedScene = preload("res://scenes/torpedo.tscn")
 
 
-func _ready() -> void:
+func setup() -> void:
+	physical_sub = $"../PhysicalSub"
 	var rand_point_idx = randi_range(0, 17)
 	print("Point: " + str(rand_point_idx))
 	orbit_point = physical_sub.get_node("OrbitPoints").get_node("Point" + str(rand_point_idx))
