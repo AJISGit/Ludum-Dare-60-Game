@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="5_wbbl4"]
 [ext_resource type="FontFile" uid="uid://bi1iccf63nn47" path="res://fonts/press-start-2p-latin-400-normal.ttf" id="6_6c6v5"]
 [ext_resource type="AudioStream" uid="uid://3eq8q5yuu07o" path="res://sounds/explosion_somewhere_far.mp3" id="7_bhwwd"]
+[ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="8_pdbwf"]
+[ext_resource type="Script" uid="uid://c26ks7oofkuim" path="res://scripts/end_thing.gd" id="9_u1jpj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wbbl4"]
 font = ExtResource("6_6c6v5")
@@ -84,3 +86,8 @@ label_settings = SubResource("LabelSettings_wbbl4")
 [node name="ExplodePlayer" type="AudioStreamPlayer" parent="." unique_id=812208035]
 stream = ExtResource("7_bhwwd")
 volume_db = -10.0
+
+[node name="EndThing" type="Sprite2D" parent="." unique_id=281653843]
+position = Vector2(502, -349)
+texture = ExtResource("8_pdbwf")
+script = ExtResource("9_u1jpj")
