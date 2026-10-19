@@ -46,5 +46,6 @@ func _on_body_entered(body: Node2D):
 	if (body == physical_sub):
 		if (from_plr): return
 		print("boom")
+		get_parent().get_parent().get_parent().get_parent().queue_free()
 		#$"../ExplodePlayer".play()
 		#body.get_node("Icon").visible = false

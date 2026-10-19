@@ -39,7 +39,7 @@ func shoot() -> void:
 	bullet.from_plr = false
 	bullet.spawn_pos = bullet.position
 	bullet.physical_sub = physical_sub
-	bullet.speed = 200.0
+	bullet.speed = 100.0
 	bullet.bullet_range = 5000.0
 	$"..".add_child(bullet)
 

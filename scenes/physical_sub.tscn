@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://depogwvxonssf" path="res://sprites/sonarsubicon.png" id="2_b6fww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plsu0"]
-size = Vector2(222, 478)
+size = Vector2(96, 118)
 
 [node name="PhysicalSub" type="CharacterBody2D" unique_id=299980349]
 script = ExtResource("1_b6fww")
@@ -12,7 +12,7 @@ max_velocity = 350.0
 metadata/_custom_type_script = "uid://basucvdev4q1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1979738507]
-position = Vector2(0, -10)
+position = Vector2(7, 13)
 shape = SubResource("RectangleShape2D_plsu0")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=316176606]

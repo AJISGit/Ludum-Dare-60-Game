@@ -26,7 +26,8 @@ polygon = PackedVector2Array(-1127, -950, 2190, -984, 2217, 1552, -932, 1526)
 unique_name_in_owner = true
 position = Vector2(478, 334)
 scale = Vector2(0.05, 0.05)
-max_velocity = 200.0
+speed = 50.0
+max_velocity = 150.0
 
 [node name="SonarThing" type="Sprite2D" parent="PhysicalSub" unique_id=1033471486]
 position = Vector2(0, 20)
