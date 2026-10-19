@@ -24,6 +24,23 @@ func _ready() -> void:
 	print("Hey")
 
 func _physics_process(delta: float) -> void:
+	var engine_sys = get_parent().get_parent().get_parent().get_node("SubmarineData").engines_system
+	var control_sys = get_parent().get_parent().get_parent().get_node("SubmarineData").control_system
+	if (engine_sys.value < engine_sys.max_value):
+		velocity = Vector2(0.0, 0.0)
+
+		if (control_sys.value >= control_sys.value):
+			$"../CanvasLayer/MoveError".visible = true
+		else:
+			$"../CanvasLayer/MoveError".visible = false
+
+	else:
+		$"../CanvasLayer/MoveError".visible = false
+	
+	if (engine_sys.value < engine_sys.max_value):
+		return
+
+
 	velocity = last_velocity
 	$OrbitPoints.rotation += PI * 0.1 * delta
 
