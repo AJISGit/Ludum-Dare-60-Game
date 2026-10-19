@@ -21,10 +21,14 @@ func switch_to(new_view: View):
 		%SubViewport.get_parent().visible = true
 		%SubViewport/GameWorld.visible = true
 		%SubViewport/GameWorld/PhysicalSub/Camera2D.enabled = true
+		$"../DistanceMonitor".visible = true
+		$"../DistLabel".visible = true
 	else:
 		%SubViewport.get_parent().visible = false
 		%SubViewport/GameWorld.visible = false
 		%SubViewport/GameWorld/PhysicalSub/Camera2D.enabled = false
+		$"../DistanceMonitor".visible = false
+		$"../DistLabel".visible = false
 
 		$"../CrewWorld/Camera2D".enabled = true
 		$"../CrewWorld".visible = true
@@ -40,4 +44,3 @@ func _input(event: InputEvent) -> void:
 
 func _ready() -> void:
 	switch_to(start_view)
-

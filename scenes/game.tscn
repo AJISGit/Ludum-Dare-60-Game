@@ -14,6 +14,12 @@
 [ext_resource type="AudioStream" uid="uid://beqhrwpur3275" path="res://sounds/enemy_engine.ogg" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://c558yqssehsiy" path="res://scripts/loop_audio.gd" id="13_kvuet"]
 [ext_resource type="Script" uid="uid://brqos2olwbbb" path="res://scripts/cursor_thing.gd" id="13_trtic"]
+[ext_resource type="Texture2D" uid="uid://4n6ijr5q47gk" path="res://sprites/distance_monitor.png" id="15_ir15t"]
+[ext_resource type="FontFile" uid="uid://bi1iccf63nn47" path="res://fonts/press-start-2p-latin-400-normal.ttf" id="16_ca42v"]
+[ext_resource type="Script" uid="uid://m1tv4f1hmg1i" path="res://scripts/dist_label.gd" id="17_rysoc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5tn8i"]
+font = ExtResource("16_ca42v")
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
@@ -78,3 +84,18 @@ render_target_update_mode = 4
 
 [node name="GameWorld" parent="SubViewportContainer/SubViewport" unique_id=425142831 instance=ExtResource("7_u5sy4")]
 visible = false
+
+[node name="DistanceMonitor" type="Sprite2D" parent="." unique_id=1061340833]
+position = Vector2(134, 306)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("15_ir15t")
+
+[node name="DistLabel" type="Label" parent="." unique_id=125480020]
+offset_left = 61.0
+offset_top = 286.0
+offset_right = 205.0
+offset_bottom = 321.0
+text = "Distance:
+5000"
+label_settings = SubResource("LabelSettings_5tn8i")
+script = ExtResource("17_rysoc")
