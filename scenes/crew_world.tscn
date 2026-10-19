@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5wdddget7gaw"]
 
 [ext_resource type="Script" uid="uid://ts44cn1syxd" path="res://scripts/crewworld.gd" id="1_s04to"]
+[ext_resource type="Texture2D" uid="uid://8pkjegisulh" path="res://sprites/SubmarineOutline.png" id="2_71re0"]
 [ext_resource type="Texture2D" uid="uid://xfpnxadv5tcv" path="res://sprites/SubmarineRooms.png" id="2_eptd4"]
 [ext_resource type="PackedScene" uid="uid://dud16fsrt84dk" path="res://scenes/npc.tscn" id="4_ob1a1"]
 [ext_resource type="PackedScene" uid="uid://db0umy3lh312h" path="res://scenes/subsystem_visual.tscn" id="5_71re0"]
@@ -8,6 +9,10 @@
 [node name="CrewWorld" type="Node2D" unique_id=245203029]
 script = ExtResource("1_s04to")
 metadata/_custom_type_script = "uid://ts44cn1syxd"
+
+[node name="SubmarineOutline" type="Sprite2D" parent="." unique_id=1379264060]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_71re0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2104125216]
 zoom = Vector2(2, 2)
@@ -28,7 +33,7 @@ start_room = 3
 npc_num = 2
 
 [node name="EngineRoom" parent="." unique_id=281195999 instance=ExtResource("5_71re0")]
-position = Vector2(7, 38)
+position = Vector2(-122, 9)
 
 [node name="Sprite2D" type="Sprite2D" parent="EngineRoom" unique_id=2063205636]
 texture = ExtResource("2_eptd4")
@@ -36,7 +41,7 @@ region_enabled = true
 region_rect = Rect2(100, 1, 32, 32)
 
 [node name="TorpedoRoom" parent="." unique_id=306530181 instance=ExtResource("5_71re0")]
-position = Vector2(45, 38)
+position = Vector2(-23, 28)
 sys_id = 1
 
 [node name="Sprite2D2" type="Sprite2D" parent="TorpedoRoom" unique_id=2005349386]
@@ -45,7 +50,7 @@ region_enabled = true
 region_rect = Rect2(1, 1, 32, 32)
 
 [node name="OxygenRoom" parent="." unique_id=1959179206 instance=ExtResource("5_71re0")]
-position = Vector2(83, 38)
+position = Vector2(-23, -10)
 sys_id = 2
 
 [node name="Sprite2D3" type="Sprite2D" parent="OxygenRoom" unique_id=1790438794]
@@ -54,7 +59,7 @@ region_enabled = true
 region_rect = Rect2(34, 1, 32, 32)
 
 [node name="ControlRoom" parent="." unique_id=967100141 instance=ExtResource("5_71re0")]
-position = Vector2(121, 38)
+position = Vector2(116, 8)
 sys_id = 3
 
 [node name="Sprite2D4" type="Sprite2D" parent="ControlRoom" unique_id=1551991701]
