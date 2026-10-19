@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://svfcp6cv4r2s" path="res://icon.svg" id="8_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://b5wdddget7gaw" path="res://scenes/crew_world.tscn" id="9_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="10_vtaks"]
+[ext_resource type="Script" uid="uid://ce3rnhregc0hv" path="res://scripts/view_switcher.gd" id="11_kvpfn"]
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
@@ -39,6 +40,7 @@ unique_name_in_owner = true
 size = Vector2i(601, 601)
 
 [node name="GameWorld" parent="SubViewport" unique_id=425142831 instance=ExtResource("7_u5sy4")]
+visible = false
 
 [node name="SonarThing" type="Sprite2D" parent="." unique_id=2083012388]
 visible = false
@@ -46,4 +48,10 @@ position = Vector2(550, 302)
 texture = ExtResource("10_vtaks")
 
 [node name="CrewWorld" parent="." unique_id=245203029 node_paths=PackedStringArray("sub_data") instance=ExtResource("9_0tnpc")]
+visible = false
 sub_data = NodePath("../SubmarineData")
+
+[node name="ViewSwitcher" type="Node" parent="." unique_id=2115611149]
+script = ExtResource("11_kvpfn")
+start_view = 1
+metadata/_custom_type_script = "uid://ce3rnhregc0hv"

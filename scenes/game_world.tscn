@@ -23,7 +23,6 @@ max_velocity = 400.0
 [node name="Camera2D" type="Camera2D" parent="PhysicalSub" unique_id=1970256948]
 
 [node name="Enemy" parent="." unique_id=386252729 instance=ExtResource("3_ywgp6")]
-visible = true
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(262, 300.99994)
 scale = Vector2(0.1, 0.1)
