@@ -106,6 +106,9 @@ func _physics_process(delta: float) -> void:
 		if (get_parent().visible):
 			move_rotation += 90.0 * delta
 
+	if (Input.is_action_pressed("break")):
+		velocity = Vector2(0.0, 0.0)
+
 
 	velocity.x = clampf(velocity.x, -max_velocity, max_velocity)
 	velocity.y = clampf(velocity.y, -max_velocity, max_velocity)
