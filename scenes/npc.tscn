@@ -7,6 +7,10 @@
 atlas = ExtResource("1_abqhh")
 region = Rect2(135, 2, 21, 31)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_abqhh"]
+atlas = ExtResource("1_abqhh")
+region = Rect2(157, 2, 21, 31)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_nh2m4"]
 animations = [{
 "frames": [{
@@ -15,6 +19,14 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abqhh")
+}],
+"loop": 1,
+"name": &"fixing",
 "speed": 5.0
 }]
 
@@ -27,6 +39,7 @@ metadata/_custom_type_script = "uid://cim5kp8pwnb2k"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1056903780]
 sprite_frames = SubResource("SpriteFrames_nh2m4")
+animation = &"fixing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1730530888]
 shape = SubResource("RectangleShape2D_5tn8i")

@@ -79,6 +79,13 @@ func _process(delta: float) -> void:
 	else:
 		modulate = Color(1.0, 1.0, 1.0)
 
+	var sys: Subsystem = sub_data.get_subsystem(room_id)
+	if (sys.value < sys.max_value):
+		$AnimatedSprite2D.play("fixing")
+	else:
+		$AnimatedSprite2D.play("default")
+
+
 
 func set_room(id: int):
 	print("Next room: " + str(id))
@@ -97,4 +104,5 @@ func set_room(id: int):
 	else:
 		position = visual_sys.get_node("Npc2").global_position
 
-	position.y -= 8.0
+#	position.y -= 8.0
+	position.y -= 12
