@@ -31,7 +31,13 @@ func _physics_process(delta: float) -> void:
 	var control_sys = get_parent().get_parent().get_parent().get_parent().get_node("SubmarineData").control_system
 	var torpedo_sys = get_parent().get_parent().get_parent().get_parent().get_node("SubmarineData").torpedoes_system
 
-	if (Input.is_action_just_pressed("mouse_click") && visible && (torpedo_sys.value >= torpedo_sys.max_value)):
+	if (torpedo_sys.value < torpedo_sys.max_value):
+		$"../CanvasLayer/WeaponError".visible = true
+	else:
+		$"../CanvasLayer/WeaponError".visible = false
+
+
+	if (Input.is_action_just_pressed("mouse_click") && (get_parent().visible) && (torpedo_sys.value >= torpedo_sys.max_value)):
 
 		var bullet: Torpedo = TORPEDO_RESOURCE.instantiate()
 		var torp_target: TorpedoTarget = TARGET_RESOURCE.instantiate()
@@ -66,12 +72,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		$"../CanvasLayer/MoveError".visible = false
 	
+	$OrbitPoints.rotation += PI * 0.1 * delta
+
 	if (engine_sys.value < engine_sys.max_value):
 		return
 
 
 	velocity = last_velocity
-	$OrbitPoints.rotation += PI * 0.1 * delta
 
 	if (Input.is_action_pressed("phys_sub_up")):
 		if (get_parent().visible):

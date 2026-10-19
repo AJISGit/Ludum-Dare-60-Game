@@ -68,10 +68,17 @@ text = "Sonar Unavailable"
 label_settings = SubResource("LabelSettings_wbbl4")
 
 [node name="MoveError" type="Label" parent="CanvasLayer" unique_id=941841748]
-offset_left = 186.0
-offset_right = 410.0
+offset_left = 30.0
+offset_right = 254.0
 offset_bottom = 23.0
 text = "Engines Offline"
+label_settings = SubResource("LabelSettings_wbbl4")
+
+[node name="WeaponError" type="Label" parent="CanvasLayer" unique_id=744683872]
+offset_left = 340.0
+offset_right = 564.0
+offset_bottom = 23.0
+text = "Weapons Offline"
 label_settings = SubResource("LabelSettings_wbbl4")
 
 [node name="ExplodePlayer" type="AudioStreamPlayer" parent="." unique_id=812208035]
