@@ -23,7 +23,7 @@ polygon = PackedVector2Array(-1127, -950, 2190, -984, 2217, 1552, -932, 1526)
 unique_name_in_owner = true
 position = Vector2(478, 334)
 scale = Vector2(0.05, 0.05)
-max_velocity = 400.0
+max_velocity = 200.0
 
 [node name="SonarThing" type="Sprite2D" parent="PhysicalSub" unique_id=1033471486]
 position = Vector2(0, 20)
@@ -35,6 +35,21 @@ texture = ExtResource("5_wbbl4")
 [node name="Enemy" parent="." unique_id=386252729 instance=ExtResource("3_ywgp6")]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(262, 300.99994)
+scale = Vector2(0.1, 0.1)
+
+[node name="Enemy2" parent="." unique_id=1322219715 instance=ExtResource("3_ywgp6")]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(987.99994, -29.99997)
+scale = Vector2(0.1, 0.1)
+
+[node name="Enemy3" parent="." unique_id=97348620 instance=ExtResource("3_ywgp6")]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(119, 1043.9999)
+scale = Vector2(0.1, 0.1)
+
+[node name="Enemy4" parent="." unique_id=936535457 instance=ExtResource("3_ywgp6")]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+position = Vector2(-1112.9999, 338.00018)
 scale = Vector2(0.1, 0.1)
 
 [node name="SonarSpinnyThing2" parent="." unique_id=1157046897 instance=ExtResource("4_0vfqx")]

@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_4ropy")
+value = 100.0
 fix_speed = 10.0
 metadata/_custom_type_script = "uid://b36sxc2lviqa2"

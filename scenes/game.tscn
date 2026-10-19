@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://ce3rnhregc0hv" path="res://scripts/view_switcher.gd" id="11_kvpfn"]
 [ext_resource type="AudioStream" uid="uid://beqhrwpur3275" path="res://sounds/enemy_engine.ogg" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://c558yqssehsiy" path="res://scripts/loop_audio.gd" id="13_kvuet"]
+[ext_resource type="Script" uid="uid://brqos2olwbbb" path="res://scripts/cursor_thing.gd" id="13_trtic"]
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
@@ -60,6 +61,7 @@ metadata/_custom_type_script = "uid://c558yqssehsiy"
 offset_left = 250.0
 offset_right = 290.0
 offset_bottom = 40.0
+script = ExtResource("13_trtic")
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=387261511]
 unique_name_in_owner = true

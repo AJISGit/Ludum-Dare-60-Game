@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c3xkt54hs18ak"]
+
+[ext_resource type="Script" uid="uid://dtnn2opqmirbu" path="res://scripts/torpedotarget.gd" id="1_hwy1p"]
+[ext_resource type="Texture2D" uid="uid://dtms6omnq2be0" path="res://sprites/TorpedoTarget.png" id="2_r7ajf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tn8i"]
+size = Vector2(31, 33)
+
+[node name="TorpedoTarget" type="Area2D" unique_id=792753045]
+script = ExtResource("1_hwy1p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=594873064]
+visible = false
+texture = ExtResource("2_r7ajf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=907186528]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_5tn8i")

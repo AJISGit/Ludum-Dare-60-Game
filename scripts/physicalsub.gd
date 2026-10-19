@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 
 const TORPEDO_RESOURCE: PackedScene = preload("res://scenes/torpedo.tscn")
+const TARGET_RESOURCE: PackedScene = preload("res://scenes/torpedo_target.tscn")
 
 @export var sub_data: SubmarineData
 @export var speed: float = 100.0
@@ -33,18 +34,24 @@ func _physics_process(delta: float) -> void:
 	if (Input.is_action_just_pressed("mouse_click") && visible && (torpedo_sys.value >= torpedo_sys.max_value)):
 
 		var bullet: Torpedo = TORPEDO_RESOURCE.instantiate()
+		var torp_target: TorpedoTarget = TARGET_RESOURCE.instantiate()
+
 		bullet.position = position
 
-		var target: Vector2 = get_local_mouse_position()
+		var target: Vector2 = get_global_mouse_position()
+		torp_target.position = target
+		torp_target.torp = bullet
+		torp_target.plr = self
+		torp_target.setup()
 
 		bullet.look_at(target)
 		bullet.from_plr = true
 		bullet.spawn_pos = bullet.position
 		bullet.physical_sub = self
-		bullet.speed = 200.0
+		bullet.speed = 210.0
 		bullet.bullet_range = 5000.0
-		bullet.visible = true
 		$"..".add_child(bullet)
+		$"..".add_child(torp_target)
 		print("Pew pew")
 
 

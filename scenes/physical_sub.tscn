@@ -22,55 +22,58 @@ texture = ExtResource("2_ruc46")
 [node name="OrbitPoints" type="Node2D" parent="." unique_id=1262405611]
 
 [node name="Point0" type="Node2D" parent="OrbitPoints" unique_id=847859014]
-position = Vector2(1110, 0)
+position = Vector2(2395, 26)
 
 [node name="Point1" type="Node2D" parent="OrbitPoints" unique_id=1381317714]
-position = Vector2(1044, 364)
+position = Vector2(2316, 665)
 
 [node name="Point2" type="Node2D" parent="OrbitPoints" unique_id=73054821]
-position = Vector2(918, 567)
+position = Vector2(2046, 1366)
 
 [node name="Point3" type="Node2D" parent="OrbitPoints" unique_id=1150085728]
-position = Vector2(738, 715)
+position = Vector2(1866, 1514)
 
 [node name="Point4" type="Node2D" parent="OrbitPoints" unique_id=2023924640]
-position = Vector2(518, 849)
+position = Vector2(741, 1989)
 
 [node name="Point5" type="Node2D" parent="OrbitPoints" unique_id=1269408697]
-position = Vector2(34, 1066)
+position = Vector2(-32, 2101)
 
 [node name="Point6" type="Node2D" parent="OrbitPoints" unique_id=1713732920]
-position = Vector2(-428, 921)
+position = Vector2(-703, 1917)
 
 [node name="Point7" type="Node2D" parent="OrbitPoints" unique_id=739440676]
-position = Vector2(-684, 754)
+position = Vector2(-1470, 1658)
 
 [node name="Point8" type="Node2D" parent="OrbitPoints" unique_id=1132218504]
-position = Vector2(-906, 409)
+position = Vector2(-1888, 868)
 
 [node name="Point9" type="Node2D" parent="OrbitPoints" unique_id=928696546]
-position = Vector2(-1034, -75)
+position = Vector2(-2226, -35)
 
 [node name="Point10" type="Node2D" parent="OrbitPoints" unique_id=946868086]
-position = Vector2(-1045, -448)
+position = Vector2(-2119, -1287)
 
 [node name="Point11" type="Node2D" parent="OrbitPoints" unique_id=1351935160]
-position = Vector2(-917, -670)
+position = Vector2(-1742, -1771)
 
 [node name="Point12" type="Node2D" parent="OrbitPoints" unique_id=161083844]
-position = Vector2(-656, -915)
+position = Vector2(-1219, -1911)
 
 [node name="Point13" type="Node2D" parent="OrbitPoints" unique_id=1031943266]
-position = Vector2(-299, -1076)
+position = Vector2(-299, -2072)
 
 [node name="Point14" type="Node2D" parent="OrbitPoints" unique_id=1595098586]
-position = Vector2(223, -1093)
+position = Vector2(223, -2089)
 
 [node name="Point15" type="Node2D" parent="OrbitPoints" unique_id=1101174933]
-position = Vector2(601, -870)
+position = Vector2(1441, -1866)
 
 [node name="Point16" type="Node2D" parent="OrbitPoints" unique_id=1717794486]
-position = Vector2(762, -720)
+position = Vector2(2034, -1467)
 
 [node name="Point17" type="Node2D" parent="OrbitPoints" unique_id=592250576]
-position = Vector2(951, -470)
+position = Vector2(2197, -627)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=564417035]
+one_shot = true

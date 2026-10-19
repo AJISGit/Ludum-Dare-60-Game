@@ -4,7 +4,8 @@ extends Area2D
 
 const BLIP_RESOURCE: PackedScene = preload("res://scenes/sonar_blip.tscn")
 const sub_blip_tex: Texture2D = preload("res://sprites/SonarBlipSub.png")
-const sub_blip_torp: Texture2D = preload("res://sprites/SonarBlipTorp.png")
+const sub_blip_torp: Texture2D = preload("res://sprites/SonarBlipGoodTorp.png")
+const sub_blip_torp_good: Texture2D = preload("res://sprites/SonarBlipTorp.png")
 var control_sys: Subsystem 
 
 
@@ -32,7 +33,7 @@ func _process(delta: float) -> void:
 
 	rotation_degrees += 360 * delta
 
-func spawn_blip(pos: Vector2, is_sub: bool):
+func spawn_blip(pos: Vector2, is_sub: bool, plr_torp: bool):
 
 	if (control_sys.value < control_sys.max_value): return
 
@@ -46,17 +47,24 @@ func spawn_blip(pos: Vector2, is_sub: bool):
 	if (is_sub):
 		blip.texture = sub_blip_tex
 	else:
-		blip.texture = sub_blip_torp
+		if (!plr_torp):
+			blip.texture = sub_blip_torp_good
+		else:
+			blip.texture = sub_blip_torp
 
 	blip.setup()
 	$"../".add_child(blip)
 
 func _on_area_entered(area: Area2D) -> void:
+	if (area as TorpedoTarget): return
 	if (area as Torpedo):
-		spawn_blip(area.position, false)
+		if (area.from_plr):
+			spawn_blip(area.position, false, true)
+		else:
+			spawn_blip(area.position, false, false)
 	else:
-		spawn_blip(area.position, true)
+		spawn_blip(area.position, true, false)
 
 func _on_body_entered(body: Node2D) -> void:
 	if (body.name == "PhysicalSub"): return
-	spawn_blip(body.position, true)
+	spawn_blip(body.position, true, false)

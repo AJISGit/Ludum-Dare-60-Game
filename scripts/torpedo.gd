@@ -32,7 +32,10 @@ func _on_area_entered(body: Node2D):
 		
 	else:
 		if (!from_plr): return
-		if (!(body as Enemy)): pass
+		if (!(body as Enemy) && !(body as Torpedo)): return
+		if (body as Torpedo):
+			if (body.from_plr):
+				return
 		body.queue_free()
 	
 	queue_free()
