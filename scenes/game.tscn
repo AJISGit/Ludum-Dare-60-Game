@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://b5wdddget7gaw" path="res://scenes/crew_world.tscn" id="9_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="10_vtaks"]
 [ext_resource type="Script" uid="uid://ce3rnhregc0hv" path="res://scripts/view_switcher.gd" id="11_kvpfn"]
+[ext_resource type="AudioStream" uid="uid://beqhrwpur3275" path="res://sounds/enemy_engine.ogg" id="12_dinhu"]
+[ext_resource type="Script" uid="uid://c558yqssehsiy" path="res://scripts/loop_audio.gd" id="13_kvuet"]
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
@@ -37,6 +39,7 @@ script = ExtResource("1_gee14")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=387261511]
 unique_name_in_owner = true
+audio_listener_enable_2d = true
 size = Vector2i(601, 601)
 
 [node name="GameWorld" parent="SubViewport" unique_id=425142831 instance=ExtResource("7_u5sy4")]
@@ -53,5 +56,10 @@ sub_data = NodePath("../SubmarineData")
 
 [node name="ViewSwitcher" type="Node" parent="." unique_id=2115611149]
 script = ExtResource("11_kvpfn")
-start_view = 1
 metadata/_custom_type_script = "uid://ce3rnhregc0hv"
+
+[node name="AmbienceStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1278797869]
+stream = ExtResource("12_dinhu")
+autoplay = true
+script = ExtResource("13_kvuet")
+metadata/_custom_type_script = "uid://c558yqssehsiy"
