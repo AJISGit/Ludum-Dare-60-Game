@@ -37,6 +37,7 @@ func _on_area_entered(body: Node2D):
 			if (body.from_plr):
 				return
 		body.queue_free()
+		$"../ExplodePlayer".play()
 	
 	queue_free()
 
@@ -45,4 +46,5 @@ func _on_body_entered(body: Node2D):
 	if (body == physical_sub):
 		if (from_plr): return
 		print("boom")
+		#$"../ExplodePlayer".play()
 		#body.get_node("Icon").visible = false

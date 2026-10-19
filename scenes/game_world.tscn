@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b85bybpeos74a" path="res://scenes/sonar_spinny_thing.tscn" id="4_0vfqx"]
 [ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="5_wbbl4"]
 [ext_resource type="FontFile" uid="uid://bi1iccf63nn47" path="res://fonts/press-start-2p-latin-400-normal.ttf" id="6_6c6v5"]
+[ext_resource type="AudioStream" uid="uid://3eq8q5yuu07o" path="res://sounds/explosion_somewhere_far.mp3" id="7_bhwwd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wbbl4"]
 font = ExtResource("6_6c6v5")
@@ -72,3 +73,7 @@ offset_right = 410.0
 offset_bottom = 23.0
 text = "Engines Offline"
 label_settings = SubResource("LabelSettings_wbbl4")
+
+[node name="ExplodePlayer" type="AudioStreamPlayer" parent="." unique_id=812208035]
+stream = ExtResource("7_bhwwd")
+volume_db = -10.0

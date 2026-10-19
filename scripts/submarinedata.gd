@@ -1,6 +1,7 @@
 class_name SubmarineData
 extends Node
 
+@export var break_timer: Timer
 
 @export_group("Subsystems")
 @export var engines_system: Subsystem
@@ -9,8 +10,20 @@ extends Node
 @export var control_system: Subsystem
 
 
+func break_stuff():
+
+	var sys: Subsystem = get_subsystem(randi_range(0, 3))
+	sys.value -= randi_range(50, 100)
+
+
+func _on_break_timer_timeout():
+	print("uh oh")
+	break_stuff()
+	break_timer.start(randi_range(10, 30))
+
+
 func _ready() -> void:
-	return
+	break_timer.connect("timeout", _on_break_timer_timeout)
 
 
 # This is some good code. ||||

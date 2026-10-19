@@ -17,13 +17,19 @@
 
 [node name="Game" type="Node2D" unique_id=1595279973]
 
-[node name="SubmarineData" type="Node" parent="." unique_id=383055807]
+[node name="SubmarineData" type="Node" parent="." unique_id=383055807 node_paths=PackedStringArray("break_timer")]
 script = ExtResource("1_uwrxv")
+break_timer = NodePath("BreakTimer")
 engines_system = ExtResource("3_0tnpc")
 torpedoes_system = ExtResource("5_kvpfn")
 oxygen_system = ExtResource("6_dinhu")
 control_system = ExtResource("5_vtaks")
 metadata/_custom_type_script = "uid://dk0bdgg7d0dbd"
+
+[node name="BreakTimer" type="Timer" parent="SubmarineData" unique_id=471319641]
+wait_time = 10.0
+one_shot = true
+autostart = true
 
 [node name="BG" type="Sprite2D" parent="." unique_id=520545395]
 visible = false
