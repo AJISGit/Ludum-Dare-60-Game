@@ -46,6 +46,10 @@ func _on_body_entered(body: Node2D):
 	if (body == physical_sub):
 		if (from_plr): return
 		print("boom")
+		get_parent().get_parent().get_parent().get_parent().get_parent().get_node("Restart").visible = true
+		get_parent().get_parent().get_parent().get_parent().get_parent().get_node("Restart").get_node("Lose").visible = true
+		get_parent().get_parent().get_parent().get_parent().get_parent().get_node("Restart").get_node("Win").visible = false
 		get_parent().get_parent().get_parent().get_parent().queue_free()
+		get_tree().paused = true
 		#$"../ExplodePlayer".play()
 		#body.get_node("Icon").visible = false

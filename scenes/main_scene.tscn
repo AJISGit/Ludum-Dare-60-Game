@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://dtdtrabuhyace"]
 
 [ext_resource type="PackedScene" uid="uid://cix80r7ukay8p" path="res://main_menu.tscn" id="1_pw63i"]
+[ext_resource type="PackedScene" uid="uid://dfrsrs62n65dp" path="res://restart_menu.tscn" id="2_pw63i"]
 
 [node name="MainScene" type="Node2D" unique_id=324674365]
 
 [node name="Menu" parent="." unique_id=835912587 instance=ExtResource("1_pw63i")]
+position = Vector2(0, 200)
+
+[node name="Restart" parent="." unique_id=813279729 instance=ExtResource("2_pw63i")]
+process_mode = 3
+visible = false
 position = Vector2(0, 200)

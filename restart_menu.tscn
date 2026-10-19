@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dfrsrs62n65dp"]
+
+[ext_resource type="FontFile" uid="uid://bi1iccf63nn47" path="res://fonts/press-start-2p-latin-400-normal.ttf" id="1_p6vsd"]
+[ext_resource type="Script" uid="uid://w147h8fvlkwk" path="res://scripts/retry.gd" id="2_p6vsd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nwq8c"]
+font = ExtResource("1_p6vsd")
+
+[node name="Node2D" type="Node2D" unique_id=813279729]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=787083997]
+position = Vector2(546, 169)
+scale = Vector2(106.90435, 88.632416)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-1127, -950, 2190, -984, 2217, 1552, -932, 1526)
+
+[node name="Lose" type="Label" parent="." unique_id=965297225]
+visible = false
+offset_left = 481.0
+offset_right = 753.0
+offset_bottom = 23.0
+text = "You Lose"
+label_settings = SubResource("LabelSettings_nwq8c")
+
+[node name="Win" type="Label" parent="." unique_id=826861634]
+offset_left = 487.0
+offset_right = 759.0
+offset_bottom = 23.0
+text = "You Win"
+label_settings = SubResource("LabelSettings_nwq8c")
+
+[node name="Button" type="Button" parent="." unique_id=854271840]
+offset_left = 512.0
+offset_top = 137.0
+offset_right = 584.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("1_p6vsd")
+text = "Play"
+script = ExtResource("2_p6vsd")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
