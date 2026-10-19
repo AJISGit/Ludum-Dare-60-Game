@@ -10,6 +10,12 @@
 script = ExtResource("1_s04to")
 metadata/_custom_type_script = "uid://ts44cn1syxd"
 
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1308879307]
+position = Vector2(546, 169)
+scale = Vector2(106.90435, 88.632416)
+color = Color(0, 0, 0.20392157, 1)
+polygon = PackedVector2Array(-1127, -950, 2190, -984, 2217, 1552, -932, 1526)
+
 [node name="SubmarineOutline" type="Sprite2D" parent="." unique_id=1379264060]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_71re0")
