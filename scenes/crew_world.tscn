@@ -21,7 +21,7 @@ zoom = Vector2(2, 2)
 [node name="Npcsp" type="Node" parent="." unique_id=1899572893]
 
 [node name="EngineRoom" parent="." unique_id=281195999 instance=ExtResource("5_71re0")]
-position = Vector2(-122, 9)
+position = Vector2(-99, 9)
 
 [node name="Sprite2D" type="Sprite2D" parent="EngineRoom" unique_id=2063205636]
 texture = ExtResource("2_eptd4")
@@ -29,7 +29,7 @@ region_enabled = true
 region_rect = Rect2(100, 1, 32, 32)
 
 [node name="TorpedoRoom" parent="." unique_id=306530181 instance=ExtResource("5_71re0")]
-position = Vector2(-23, 28)
+position = Vector2(52, 8)
 sys_id = 1
 
 [node name="Sprite2D2" type="Sprite2D" parent="TorpedoRoom" unique_id=2005349386]
@@ -38,7 +38,7 @@ region_enabled = true
 region_rect = Rect2(1, 1, 32, 32)
 
 [node name="OxygenRoom" parent="." unique_id=1959179206 instance=ExtResource("5_71re0")]
-position = Vector2(-23, -10)
+position = Vector2(-24, 8)
 sys_id = 2
 
 [node name="Sprite2D3" type="Sprite2D" parent="OxygenRoom" unique_id=1790438794]

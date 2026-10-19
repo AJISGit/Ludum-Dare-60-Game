@@ -18,7 +18,7 @@ func switch_to(new_view: View):
 		$"../CrewWorld/Camera2D".enabled = false
 		$"../CrewWorld".visible = false
 
-		$"../SonarThing".visible = true
+#		$"../SonarThing".visible = true
 		$"../TextureRect2".visible = true
 		%SubViewport/GameWorld.visible = true
 		%SubViewport/GameWorld/PhysicalSub/Camera2D.enabled = true

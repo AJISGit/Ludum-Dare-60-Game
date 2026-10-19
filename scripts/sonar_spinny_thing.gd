@@ -5,6 +5,7 @@ extends Area2D
 const BLIP_RESOURCE: PackedScene = preload("res://scenes/sonar_blip.tscn")
 const sub_blip_tex: Texture2D = preload("res://sprites/SonarBlipSub.png")
 const sub_blip_torp: Texture2D = preload("res://sprites/SonarBlipTorp.png")
+var control_sys: Subsystem 
 
 
 func _ready() -> void:
@@ -13,11 +14,27 @@ func _ready() -> void:
 	connect("body_entered", _on_body_entered)
 
 func _process(delta: float) -> void:
+	control_sys = get_parent().get_parent().get_parent().get_node("SubmarineData").control_system
 	position = %PhysicalSub.position
 	position.y += 2
+	if (control_sys.value < control_sys.max_value):
+
+		visible = false
+		%PhysicalSub.visible = false
+		$"../CanvasLayer/Error".visible = true
+
+		return
+	else:
+		visible = true
+		%PhysicalSub.visible = true
+		$"../CanvasLayer/Error".visible = false
+
+
 	rotation_degrees += 360 * delta
 
 func spawn_blip(pos: Vector2, is_sub: bool):
+
+	if (control_sys.value < control_sys.max_value): return
 
 	var blip: SonarBlip = BLIP_RESOURCE.instantiate()
 	blip.position = pos

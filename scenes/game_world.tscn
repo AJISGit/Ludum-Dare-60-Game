@@ -4,6 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bq8c36f6yfj3p" path="res://scenes/physical_sub.tscn" id="2_0vfqx"]
 [ext_resource type="PackedScene" uid="uid://b48fnkshn3x54" path="res://scenes/enemy.tscn" id="3_ywgp6"]
 [ext_resource type="PackedScene" uid="uid://b85bybpeos74a" path="res://scenes/sonar_spinny_thing.tscn" id="4_0vfqx"]
+[ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="5_wbbl4"]
+[ext_resource type="FontFile" uid="uid://bi1iccf63nn47" path="res://fonts/press-start-2p-latin-400-normal.ttf" id="6_6c6v5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wbbl4"]
+font = ExtResource("6_6c6v5")
 
 [node name="GameWorld" type="Node2D" unique_id=425142831]
 script = ExtResource("1_0biqy")
@@ -20,6 +25,11 @@ position = Vector2(478, 334)
 scale = Vector2(0.05, 0.05)
 max_velocity = 400.0
 
+[node name="SonarThing" type="Sprite2D" parent="PhysicalSub" unique_id=1033471486]
+position = Vector2(0, 20)
+scale = Vector2(19.999998, 19.999998)
+texture = ExtResource("5_wbbl4")
+
 [node name="Camera2D" type="Camera2D" parent="PhysicalSub" unique_id=1970256948]
 
 [node name="Enemy" parent="." unique_id=386252729 instance=ExtResource("3_ywgp6")]
@@ -30,3 +40,13 @@ scale = Vector2(0.1, 0.1)
 [node name="SonarSpinnyThing2" parent="." unique_id=1157046897 instance=ExtResource("4_0vfqx")]
 position = Vector2(300, 302)
 scale = Vector2(0.9999997, 0.9999997)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1123179308]
+
+[node name="Error" type="Label" parent="CanvasLayer" unique_id=1151798977]
+offset_left = 175.0
+offset_top = 316.0
+offset_right = 447.0
+offset_bottom = 339.0
+text = "Sonar Unavailable"
+label_settings = SubResource("LabelSettings_wbbl4")
