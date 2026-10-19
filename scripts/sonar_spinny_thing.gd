@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		$"../CanvasLayer/Error".visible = false
 
 
-	rotation_degrees += 360 * delta
+	rotation_degrees += 540 * delta
 
 func spawn_blip(pos: Vector2, is_sub: bool, plr_torp: bool):
 

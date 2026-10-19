@@ -19,12 +19,12 @@ func _physics_process(delta: float) -> void:
 
 	if (position.distance_to(orbit_point.global_position) < 5):
 		pass
-	if (position.distance_to(orbit_point.global_position) > 800):
+	if (position.distance_to(orbit_point.global_position) > 700):
 		position = physical_sub.position
-		position.y -= 750
+		position.y -= 650
 	# Code recycled from my last game jam game: https://ajisboss.itch.io/countdown-to-powerdown
 	look_at(orbit_point.global_position)
-	position += Vector2(1.0, 0.0).rotated(rotation) * 150.0 * delta
+	position += Vector2(1.0, 0.0).rotated(rotation) * 75.0 * delta
 	rotation = 0
 
 
@@ -43,7 +43,7 @@ func shoot() -> void:
 	bullet.from_plr = false
 	bullet.spawn_pos = bullet.position
 	bullet.physical_sub = physical_sub
-	bullet.speed = 100.0
+	bullet.speed = 50.0
 	bullet.bullet_range = 5000.0
 	$"..".add_child(bullet)
 

@@ -61,7 +61,7 @@ func _physics_process(delta: float) -> void:
 		bullet.from_plr = true
 		bullet.spawn_pos = bullet.position
 		bullet.physical_sub = self
-		bullet.speed = 210.0
+		bullet.speed = 105.0
 		bullet.bullet_range = 5000.0
 		$"..".add_child(bullet)
 		$"..".add_child(torp_target)

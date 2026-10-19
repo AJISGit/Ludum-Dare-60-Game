@@ -30,8 +30,8 @@ polygon = PackedVector2Array(-1127, -950, 2190, -984, 2217, 1552, -932, 1526)
 unique_name_in_owner = true
 position = Vector2(478, 334)
 scale = Vector2(0.05, 0.05)
-speed = 50.0
-max_velocity = 150.0
+speed = 10.0
+max_velocity = 35.0
 
 [node name="DirectionPointer" type="Sprite2D" parent="PhysicalSub" unique_id=544662817]
 position = Vector2(0.0001373291, 19.999695)
@@ -83,7 +83,7 @@ volume_db = -10.0
 [node name="EndThing" type="Sprite2D" parent="." unique_id=281653843]
 unique_name_in_owner = true
 visible = false
-position = Vector2(502, -20000)
+position = Vector2(502, -4666)
 texture = ExtResource("8_pdbwf")
 script = ExtResource("9_u1jpj")
 
