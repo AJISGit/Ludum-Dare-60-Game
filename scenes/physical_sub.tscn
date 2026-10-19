@@ -77,4 +77,5 @@ position = Vector2(2034, -1467)
 position = Vector2(2197, -627)
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=564417035]
+wait_time = 2.0
 one_shot = true

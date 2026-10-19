@@ -9,6 +9,8 @@ const TARGET_RESOURCE: PackedScene = preload("res://scenes/torpedo_target.tscn")
 @export var speed: float = 100.0
 @export var max_velocity: float = 1000.0
 var move_rotation: float = 0.0
+var can_shoot: bool = true
+@onready var shoot_timer: Timer = $ShootTimer
 
 var last_velocity: Vector2
 
@@ -22,9 +24,14 @@ func move_down(delta: float):
 func move_right(delta: float):
 	velocity.x += speed * delta
 
+func _on_shoot_timer_timeout() -> void:
+	can_shoot = true
+
 
 func _ready() -> void:
+	shoot_timer.connect("timeout", _on_shoot_timer_timeout)
 	print("Hey")
+	
 
 func _physics_process(delta: float) -> void:
 	var engine_sys = get_parent().get_parent().get_parent().get_parent().get_node("SubmarineData").engines_system
@@ -37,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		$"../CanvasLayer/WeaponError".visible = false
 
 
-	if (Input.is_action_just_pressed("mouse_click") && (get_parent().visible) && (torpedo_sys.value >= torpedo_sys.max_value)):
+	if (Input.is_action_just_pressed("mouse_click") && (get_parent().visible) && (torpedo_sys.value >= torpedo_sys.max_value) && can_shoot):
 
 		var bullet: Torpedo = TORPEDO_RESOURCE.instantiate()
 		var torp_target: TorpedoTarget = TARGET_RESOURCE.instantiate()
@@ -58,6 +65,10 @@ func _physics_process(delta: float) -> void:
 		bullet.bullet_range = 5000.0
 		$"..".add_child(bullet)
 		$"..".add_child(torp_target)
+
+		can_shoot = false
+		shoot_timer.start()
+
 		print("Pew pew")
 
 
