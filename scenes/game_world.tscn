@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://df5oloh41sf3p" path="res://scripts/world.gd" id="1_0biqy"]
 [ext_resource type="PackedScene" uid="uid://bq8c36f6yfj3p" path="res://scenes/physical_sub.tscn" id="2_0vfqx"]
 [ext_resource type="Script" uid="uid://dnge0dt72twf0" path="res://scripts/enemy_spawner.gd" id="2_uh34q"]
+[ext_resource type="Texture2D" uid="uid://dlpsc2hq2mi6r" path="res://sprites/pointer.png" id="3_odt01"]
 [ext_resource type="PackedScene" uid="uid://b48fnkshn3x54" path="res://scenes/enemy.tscn" id="3_ywgp6"]
 [ext_resource type="PackedScene" uid="uid://b85bybpeos74a" path="res://scenes/sonar_spinny_thing.tscn" id="4_0vfqx"]
+[ext_resource type="Script" uid="uid://cv8oojk2udvgn" path="res://scripts/direction.gd" id="4_6ll7h"]
 [ext_resource type="Texture2D" uid="uid://b0ehsp5c6a1yd" path="res://sprites/Sonar2.png" id="5_wbbl4"]
 [ext_resource type="FontFile" uid="uid://bi1iccf63nn47" path="res://fonts/press-start-2p-latin-400-normal.ttf" id="6_6c6v5"]
 [ext_resource type="AudioStream" uid="uid://3eq8q5yuu07o" path="res://sounds/explosion_somewhere_far.mp3" id="7_bhwwd"]
@@ -29,6 +31,13 @@ position = Vector2(478, 334)
 scale = Vector2(0.05, 0.05)
 speed = 50.0
 max_velocity = 150.0
+
+[node name="DirectionPointer" type="Sprite2D" parent="PhysicalSub" unique_id=544662817]
+position = Vector2(0.0001373291, -40.000298)
+scale = Vector2(19.999998, 19.999998)
+texture = ExtResource("3_odt01")
+script = ExtResource("4_6ll7h")
+metadata/_custom_type_script = "uid://cv8oojk2udvgn"
 
 [node name="SonarThing" type="Sprite2D" parent="PhysicalSub" unique_id=1033471486]
 position = Vector2(0, 20)
@@ -70,6 +79,7 @@ stream = ExtResource("7_bhwwd")
 volume_db = -10.0
 
 [node name="EndThing" type="Sprite2D" parent="." unique_id=281653843]
+unique_name_in_owner = true
 position = Vector2(502, -349)
 texture = ExtResource("8_pdbwf")
 script = ExtResource("9_u1jpj")
